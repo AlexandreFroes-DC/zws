@@ -1,6 +1,9 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-import Plot from 'react-plotly.js';
+import dynamic from 'next/dynamic';
+
+// importa o Plot apenas no client (evita self is not defined)
+const Plot = dynamic(() => import('react-plotly.js'), { ssr: false });
 
 export default function DashboardPage() {
   const [data, setData] = useState(null);
