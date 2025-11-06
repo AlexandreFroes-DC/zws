@@ -79,8 +79,8 @@ export default function DashboardPage() {
         <Plot
           data={[
             {
-              x: top10Sold.map((i) => i.totalVendido),
-              y: top10Sold.map((i) => i.produto),
+              x: top10Sold.map((i) => i. produto),
+              y: top10Sold.map((i) => i.totalVendido),
               type: 'bar',
               text: top10Sold.map(
                 (i) =>
@@ -101,8 +101,8 @@ export default function DashboardPage() {
             plot_bgcolor: '#111827',
             paper_bgcolor: '#111827',
             font: { color: '#fff' },
-            xaxis: { title: 'Unidades Vendidas' },
-            yaxis: { automargin: true },
+            xaxis: { automargin: true },
+            yaxis: { title: 'Unidades Vendidas' },
           }}
           config={{ displayModeBar: false, responsive: true }}
         />
